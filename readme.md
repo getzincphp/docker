@@ -8,3 +8,16 @@ It will serve:
   - Apache
   - Ubuntu
   - Adminer
+
+# Usage
+
+Run this commands,
+
+```ssh
+docker-compose build
+docker-compose up
+```
+
+ZincPHP api response: http://localhost:4700
+
+Mysql Adminer: http://localhost:4701

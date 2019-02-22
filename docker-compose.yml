@@ -8,8 +8,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: zincphp
-      MYSQL_USER: zpman
-      MYSQL_PASSWORD: zpman
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
   adminer:
     image: adminer:4.7
     restart: always
@@ -21,6 +21,6 @@ services:
     depends_on:
       - db
     volumes:
-      - /Users/hasan/Dropbox/rakibtg-chobihut-kazi.j.n/Zinc-Family/getzincphp:/var/www/html
+      - /Users/hasan/Zinc-Family/getzincphp:/var/www/html
     ports:
       - "4700:80"
