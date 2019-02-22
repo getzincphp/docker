@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./getzincphp_db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: zincphp
+      MYSQL_USER: zpman
+      MYSQL_PASSWORD: zpman
+  adminer:
+    image: adminer:4.7
+    restart: always
+    ports:
+      - 4701:8080
+  web:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - /Users/hasan/Dropbox/rakibtg-chobihut-kazi.j.n/Zinc-Family/getzincphp:/var/www/html
+    ports:
+      - "4700:80"

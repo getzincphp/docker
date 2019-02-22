@@ -1,0 +1,1 @@
+docker exec -it getzincphp-docker_web_1 /bin/bash
